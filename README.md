@@ -64,6 +64,8 @@ Leave all other values at their defaults and click Create.
 
 Now that we have deployed a sample application, select the deployment in the main screen, and then select the route that was automatically created for you. You should get a new web page that simply states "Hello from example application." If you did not get this page, go back and check your deployment to make sure that it is running before continuing. Keep this window around, you will use it again shortly.
 
+> **NOTE:** If you get an error accessing the "/metrics" endpoint, check to ensure that your browser did not upgrade your connection to an SSL connection. You can also test the application using a curl command by copying the route that was created and running `curl <URL for Route>`.
+
 ### Viewing the Raw metrics
 
 The prometheus-example-app is configured to expose the metrics on the "/metrics" of the application. Take a look at the data that is exposed. If you have never seen OpenMetrics (Prometheus) data before, spend a few minutes reviewing the output. It is human readable, and in most cases commented with an explanation as to what the value is representing. For example:
