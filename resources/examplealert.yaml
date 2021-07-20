@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: example-404-alert
+spec:
+  groups:
+  - name: example
+    rules:
+    - alert: TooManyErrorAlert
+      expr: delta(http_requests_total{code="404"}[5m]) > 10
+      labels:
+        severity: warning

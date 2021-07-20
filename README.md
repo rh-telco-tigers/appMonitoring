@@ -164,7 +164,9 @@ We created one simple alert rule, which will fire if there are more than 10 404s
 2. Click Monitoring in the left navigation
 3. Select the "Alerts" tab and see that the alert is now firing
 
-If your cluster is configured to send alerts per these instructions [Sending notifications to external systems](https://docs.openshift.com/container-platform/4.6/monitoring/managing-alerts.html#sending-notifications-to-external-systems_managing-alerts) user defined alerts can be raised to external systems.
+Because we wrote the alert to trigger when the number of alerts is greater than 10 over a 5 minute period, this alert will also clear itself. Wait 5 minutes and then refresh the alerts tab. You will see that the alert is no longer firing. The alert has cleared up on its own due to the way that we wrote the rule.
+
+If your cluster is configured to send alerts per these instructions [Sending notifications to external systems](https://docs.openshift.com/container-platform/4.7/monitoring/managing-alerts.html#sending-notifications-to-external-systems_managing-alerts) user defined alerts can be raised to external systems.
 
 ## References
 
